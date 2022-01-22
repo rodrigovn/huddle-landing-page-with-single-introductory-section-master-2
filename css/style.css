@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html {
+  background-color: #674baf;
+  background-image: url(/images/bg-mobile.svg);
+  background-repeat: no-repeat;
+}
+@media (min-width: 600px) {
+  html {
+    background-image: url(/images/bg-desktop.svg);
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  padding: 2rem;
+  color: white;
+}
+body header {
+  margin-bottom: 2rem;
+}
+@media (min-width: 600px) {
+  body header {
+    margin-bottom: 4rem;
+  }
+}
+body header img {
+  max-width: 8rem;
+}
+@media (min-width: 600px) {
+  body header img {
+    max-width: 12rem;
+  }
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 900px) {
+  .container {
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.container img {
+  max-width: 18rem;
+}
+@media (min-width: 600px) {
+  .container img {
+    max-width: 40rem;
+  }
+}
+.container-text {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.2rem;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  .container-text {
+    max-width: 40rem;
+    padding: 2.5 rem;
+  }
+}
+@media (min-width: 900px) {
+  .container-text {
+    text-align: left;
+  }
+}
+.container-text h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+@media (min-width: 900px) {
+  .container-text h1 {
+    padding: 0 2rem 0 0;
+    font-size: 36px;
+  }
+}
+.container-text button {
+  margin-top: 1rem;
+  background-color: white;
+  color: #674baf;
+  transition: 0.2s;
+  padding: 0.5rem 1rem;
+  min-width: 15rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+.container-text button:hover {
+  background-color: #e882e8;
+}
+
+footer {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 900px) {
+  footer {
+    align-items: flex-end;
+  }
+}
+footer .media-logos {
+  display: flex;
+  flex-flow: row;
+  gap: 1rem;
+}
+footer .attribution {
+  display: none;
+  font-size: 11px;
+  text-align: center;
+}
+footer .attribution a {
+  color: #3e52a3;
+}
+
+.media-logos a {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+  text-align: center;
+}
+.media-logos a:hover {
+  background-color: #e882e8;
+}
+.media-logos a i {
+  padding: 7px 0 0 0;
+  font-size: 12px;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

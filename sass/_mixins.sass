@@ -1,0 +1,30 @@
+@use 'variables'
+
+@mixin flex-center-col
+    height: 100%
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center
+
+@mixin flex-center-row
+    height: 100%
+    display: flex
+    flex-flow: row
+    align-items: center
+    justify-content: center
+
+@mixin container-mobile
+    max-width: variables.$max-width-mobile
+    padding: 1.5rem 0
+    margin: 0 auto
+
+@mixin tablet
+    @media(min-width: 600px)
+        @content
+
+@mixin desktop
+    @media(min-width: 900px)
+        @content
+        
+    

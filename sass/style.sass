@@ -1,0 +1,95 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-size: 16px
+
+html
+    background-color: variables.$violet
+    background-image: url(/images/bg-mobile.svg)
+    background-repeat: no-repeat
+    @include mixins.tablet
+        background-image: url(/images/bg-desktop.svg)
+body
+    font-family: 'Open Sans', sans-serif
+    padding: 2rem
+    color: white
+    header
+        margin-bottom: 2rem
+        @include mixins.tablet
+            margin-bottom: 4rem
+        img
+            max-width: 8rem
+            @include mixins.tablet
+                max-width: 12rem
+
+.container
+    @include mixins.flex-center-col
+    gap: 3rem
+    margin-bottom: 4rem
+    @include mixins.desktop
+        @include mixins.flex-center-row
+    img
+        max-width: 18rem
+        @include mixins.tablet
+                max-width: 40rem
+    &-text
+        @include mixins.flex-center-col
+        text-align: center
+        padding: .2rem
+        gap: 1rem
+        @include mixins.tablet
+            max-width: 40rem
+            padding: 2.5    rem
+        @include mixins.desktop
+            text-align: left
+        h1
+            font-family: 'Poppins', sans-serif
+            font-weight: 600
+            font-size: 24px   
+            @include mixins.desktop
+                padding: 0 2rem 0 0
+                font-size: 36px  
+        button
+            margin-top: 1rem
+            background-color: white
+            color: variables.$violet
+            transition: .2s
+            padding: .5rem 1rem
+            min-width: 15rem
+            border-radius: 1rem
+            border: none
+            cursor: pointer
+            &:hover
+                background-color: variables.$soft-magenta
+footer
+    @include mixins.flex-center-col
+    @include mixins.desktop
+            align-items: flex-end
+    .media-logos
+        display: flex
+        flex-flow: row
+        gap: 1rem
+    .attribution
+        display: none
+        font-size: 11px
+        text-align: center
+        a
+            color: hsl(228, 45%, 44%)
+.media-logos
+    a
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        border: 1px solid white
+        cursor: pointer
+        text-align: center
+        &:hover
+            background-color: variables.$soft-magenta
+        i
+            padding: 7px 0 0 0
+            font-size:12px
+            color: white
